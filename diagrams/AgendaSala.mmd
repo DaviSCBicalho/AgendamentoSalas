@@ -1,1 +1,26 @@
-Er diagram
+erDiagram
+SALA ||--o{ RESERVA : reservada
+USUARIO ||--o{ RESERVA : realiza
+
+SALA{
+    int numSala pk "NOT NULL"
+    int andar "NOT NULL"
+    double tamanho "NOT NULL"
+    int numAssentos "NULL"
+}
+
+USUARIO{
+    int matricula pk "NOT NULL"
+    string nome "NOT NULL"
+    int telefone "NOT NULL"
+    date dtNasc "NOT NULL"
+}
+
+RESERVA{
+    int idReserva pk "NOT NULL"
+    dateTime dtInicio "NOT NULL"
+    dateTime dtFim "NOT NULL"
+    date dtReserva "NOT NULL"
+    int numSala fk "NOT NULL"
+    int matricula fk "NOT NULL"    
+}
