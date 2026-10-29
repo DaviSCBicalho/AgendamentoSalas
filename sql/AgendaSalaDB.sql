@@ -4,6 +4,7 @@ DROP TABLE reservas;
 
 CREATE TABLE salas
 (
+	idSala INTEGER NOT NULL,
 	numSala INTEGER NOT NULL,
 	andar INTEGER NOT NULL,
 	numAssentos INTEGER NULL,
@@ -13,7 +14,7 @@ CREATE TABLE salas
 CREATE TABLE usuarios
 (
 	matricula INTEGER NOT NULL,
-	telefone INTEGER NOT NULL,
+	telefone varchar2(13) NOT NULL,
 	nome varchar2(50) NOT NULL,
 	dataNasc DATE NOT NULL
 );
@@ -29,7 +30,7 @@ CREATE TABLE reservas
 );
 
 ALTER TABLE salas
-ADD PRIMARY KEY (numSala);
+ADD PRIMARY KEY (idSala);
 
 ALTER TABLE usuarios
 ADD PRIMARY KEY (matricula);
@@ -38,7 +39,7 @@ ALTER TABLE reservas
 ADD PRIMARY KEY (idReserva);
 
 ALTER TABLE reservas
-ADD CONSTRAINT f1 FOREIGN KEY (numSala)
+ADD CONSTRAINT f1 FOREIGN KEY (idSala)
 REFERENCES salas(numSala);
 
 ALTER TABLE reservas
