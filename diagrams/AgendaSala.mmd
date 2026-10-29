@@ -3,7 +3,8 @@ SALA ||--o{ RESERVA : reservada
 USUARIO ||--o{ RESERVA : realiza
 
 SALA{
-    int numSala pk "NOT NULL"
+    int idSala pk  "NOT NULL"
+    int numSala "NOT NULL"
     int andar "NOT NULL"
     double tamanho "NOT NULL"
     int numAssentos "NULL"
@@ -12,7 +13,7 @@ SALA{
 USUARIO{
     int matricula pk "NOT NULL"
     string nome "NOT NULL"
-    int telefone "NOT NULL"
+    string telefone "NOT NULL"
     date dtNasc "NOT NULL"
 }
 
@@ -21,6 +22,6 @@ RESERVA{
     dateTime dtInicio "NOT NULL"
     dateTime dtFim "NOT NULL"
     date dtReserva "NOT NULL"
-    int numSala fk "NOT NULL"
+    int idSala fk "NOT NULL"
     int matricula fk "NOT NULL"    
 }
