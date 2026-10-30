@@ -1,6 +1,6 @@
+DROP TABLE reservas;
 DROP TABLE salas;
 DROP TABLE usuarios;
-DROP TABLE reservas;
 
 CREATE TABLE salas
 (
