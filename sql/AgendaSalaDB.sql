@@ -14,18 +14,18 @@ CREATE TABLE salas
 CREATE TABLE usuarios
 (
 	matricula INTEGER NOT NULL,
-	telefone varchar2(13) NOT NULL,
-	nome varchar2(50) NOT NULL,
+	telefone varchar(13) NOT NULL,
+	nome varchar(50) NOT NULL,
 	dataNasc DATE NOT NULL
 );
 
 CREATE TABLE reservas
 (
 	idReserva INTEGER NOT NULL,
-	numSala INTEGER NOT NULL,
+	idSala INTEGER NOT NULL,
 	matricula INTEGER NOT NULL,
-	dtInicio DATE NOT NULL,
-	dtFim DATE NOT NULL,
+	dtInicio DATETIME NOT NULL,
+	dtFim DATETIME NOT NULL,
 	dtReserva DATE NOT NULL
 );
 
