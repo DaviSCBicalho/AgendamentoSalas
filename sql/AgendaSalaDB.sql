@@ -5,7 +5,7 @@ DROP TABLE reservas;
 CREATE TABLE salas
 (
 	idSala INTEGER NOT NULL,
-	numSala INTEGER NOT NULL,
+	idSala INTEGER NOT NULL,
 	andar INTEGER NOT NULL,
 	numAssentos INTEGER NULL,
 	tamanho DECIMAL(10,2) NOT NULL
@@ -40,7 +40,7 @@ ADD PRIMARY KEY (idReserva);
 
 ALTER TABLE reservas
 ADD CONSTRAINT f1 FOREIGN KEY (idSala)
-REFERENCES salas(numSala);
+REFERENCES salas(idSala);
 
 ALTER TABLE reservas
 ADD CONSTRAINT f2 FOREIGN KEY (matricula)
