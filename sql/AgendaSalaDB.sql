@@ -5,7 +5,7 @@ DROP TABLE reservas;
 CREATE TABLE salas
 (
 	idSala INTEGER NOT NULL,
-	idSala INTEGER NOT NULL,
+	numSala INTEGER NOT NULL,
 	andar INTEGER NOT NULL,
 	numAssentos INTEGER NULL,
 	tamanho DECIMAL(10,2) NOT NULL
