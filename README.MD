@@ -74,7 +74,7 @@ O [PopularBanco.java](src/pack/PopularBanco.java) verifica se a tabela `salas` e
 Para encerrar, escolha a opção **[0] Sair** do menu principal.
 
 ## Organização
-- [diagrams](diagrams): Nesse diretório está o [diagrama relacional](diagrams/diagrama_relacional.png) (lógico) do sistema, também em [PDF](diagrams/diagrama_relacional.pdf) e em [código Mermaid](diagrams/diagrama_relacional.mmd).
+- [diagrams](diagrams): Nesse diretório está o [diagrama relacional](diagrams/diagrama_relacional.pdf) (lógico) do sistema, também em [código Mermaid](diagrams/AgendaSala.mmd).
     * O sistema possui três entidades: SALAS, USUARIOS e RESERVAS
     * Uma sala e um usuário podem ter várias reservas (relacionamentos 1:N)
 - [sql](sql): Nesse diretório estão os scripts para criação das tabelas e inserção de dados fictícios para testes do sistema
@@ -120,7 +120,7 @@ Para encerrar, escolha a opção **[0] Sair** do menu principal.
         }
         ```
       - Outros exemplos: [PessoaDB.java](src/pack/PessoaDB.java), [SalaDB.java](src/pack/SalaDB.java) e [ReservaDB.java](src/pack/ReservaDB.java)
-    * **Classes das entidades:** [Pessoa.java](src/pack/Pessoa.java) (tabela `usuarios`), [Sala.java](src/pack/Sala.java) (tabela `salas`) e [Reserva.java](src/pack/Reserva.java) (tabela `reservas`), conforme descrito no [diagrama relacional](diagrams/diagrama_relacional.png).
+    * **Classes das entidades:** [Pessoa.java](src/pack/Pessoa.java) (tabela `usuarios`), [Sala.java](src/pack/Sala.java) (tabela `salas`) e [Reserva.java](src/pack/Reserva.java) (tabela `reservas`), conforme descrito no [diagrama relacional](diagrams/diagrama_relacional.pdf).
     * **Classes controladoras:** [PessoaDB.java](src/pack/PessoaDB.java), [SalaDB.java](src/pack/SalaDB.java) e [ReservaDB.java](src/pack/ReservaDB.java), responsáveis por realizar inserção, alteração, consulta e exclusão dos registros das tabelas. A [ReservaDB.java](src/pack/ReservaDB.java) também impede que uma sala tenha duas reservas com horários sobrepostos.
     * **Relatórios:** [RelatorioDB.java](src/pack/RelatorioDB.java) é a classe responsável por gerar todos os relatórios do sistema e por contar os registros exibidos na tela inicial.
       - Reservas detalhadas (junção de `reservas`, `salas` e `usuarios`)
