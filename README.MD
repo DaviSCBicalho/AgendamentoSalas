@@ -5,7 +5,6 @@ Esse sistema é composto por um conjunto de tabelas que representam a reserva de
 - **Disciplina:** Banco de Dados (2026/2)
 - **Professor:** Howard Roatti
 - **Integrantes:** Alécio Pires, Davi Bicalho
-- **Vídeo demonstrativo:** (adicionar o link do YouTube)
 
 Na VM Linux da disciplina (Ubuntu), os bancos de dados rodam em containers Docker, definidos em `~/database_services/docker-compose.yml`. O MySQL já está configurado (banco `maindb`, usuário `root`, senha `mysql`), então basta iniciar o container. **Esse é o único passo feito pelo terminal.** Abra um terminal na área de trabalho da VM e execute:
 
