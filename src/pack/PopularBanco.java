@@ -14,7 +14,31 @@ public class PopularBanco {
 
     public static void main(String[] args) {
 
-        Path arquivo = Path.of(args.length > 0 ? args[0] : "sql/popular.sql").toAbsolutePath();
+        if (args.length > 0) {
+            executar(args[0]);
+            return;
+        }
+
+        boolean existe = false;
+
+        try (Connection conn = Conexao.conectar();
+             ResultSet rs = conn.getMetaData().getTables(conn.getCatalog(), null, "salas", null)) {
+            existe = rs.next();
+        } catch (SQLException e) {
+            System.out.println("ERRO: " + e.getMessage());
+            return;
+        }
+
+        if (!existe) {
+            executar("sql/estrutura.sql");
+        }
+
+        executar("sql/popular.sql");
+    }
+
+    static void executar(String caminho) {
+
+        Path arquivo = Path.of(caminho).toAbsolutePath();
         String conteudo;
 
         try {
